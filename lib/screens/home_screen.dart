@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:healthcare_app/screens/appointment_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   List symptoms = [
@@ -39,7 +40,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 CircleAvatar(
                   radius: 25,
-                  backgroundImage: AssetImage("assets/doctor1.jpg"),
+                  backgroundImage: AssetImage("assets/doctor3.jpg"),
                 ),
               ],
             ),
@@ -218,7 +219,14 @@ class HomeScreen extends StatelessWidget {
             physics: NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
               return InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => AppointmentScreen(),
+                    ),
+                  );
+                },
                 child: Container(
                   margin: EdgeInsets.all(8),
                   padding: EdgeInsets.symmetric(vertical: 15),

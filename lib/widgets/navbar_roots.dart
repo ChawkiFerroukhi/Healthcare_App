@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:healthcare_app/screens/home_screen.dart';
+import 'package:healthcare_app/screens/messages_screen.dart';
+import 'package:healthcare_app/screens/settings_screen.dart';
 
 class NavBarRoots extends StatefulWidget {
   const NavBarRoots({super.key});
@@ -17,12 +19,12 @@ class _NavBarRootsState extends State<NavBarRoots> {
   final _screens = [
     // Home Screen
     HomeScreen(),
+    // Messages Screen
+    MessagesScreen(),
     //
     Container(),
-    //
-    Container(),
-    //
-    Container(),
+    // Settings Screen
+    SettingsScreen(),
   ];
 
   @override
